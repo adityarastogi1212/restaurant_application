@@ -1,0 +1,21 @@
+<h1>Login</h1>
+<div>
+    <form [formGroup]="userData" (ngSubmit)="submitData1()">
+        <label>
+            Username:
+            <br/>
+            <input type="text" formControlName="username">
+        </label><br/>
+        <label>
+            Password:
+            <br/>
+            <input type="text" formControlName="password">
+        </label><br/>
+        
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div *ngIf="flag==1">
+    <h2>{{data.status}}</h2>
+</div>

@@ -1,0 +1,40 @@
+<h1>Register</h1>
+<div>
+    <form [formGroup]="userData" (ngSubmit)="submitData2()">
+        <label>
+            Username:  
+            <br/>
+            <input type="text" formControlName="username">
+        </label><br/>
+        <label>
+            Password:  
+            <br/>
+            <input type="text" formControlName="password">
+        </label><br/>
+        <label>
+            First Name:
+            <br/>
+            <input type="text" formControlName="firstName">
+        </label><br/>
+        <label>
+            Last Name: 
+            <br/>
+            <input type="text" formControlName="lastname">
+        </label><br/>
+        <label>
+            Email:     
+            <br/>
+            <input type="text" formControlName="email">
+        </label><br/>
+        <label>
+            Phone:    
+            <br/> 
+            <input type="text" formControlName="phone">
+        </label><br/>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div *ngIf="flag==1">
+    <h2>{{data.status}}</h2>
+</div>

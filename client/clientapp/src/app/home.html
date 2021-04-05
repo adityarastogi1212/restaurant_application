@@ -1,0 +1,23 @@
+<h1>Hello Everyone!</h1>
+<div>
+    <form [formGroup]="userData" (ngSubmit)="submitData()">
+        <label>
+            Name:
+            <input type="text" formControlName="name">
+        </label><br/>
+        <label>
+            Brand:
+            <input type="text" formControlName="brand">
+        </label><br/>
+        <label>
+            Price:
+            <input type="text" formControlName="price">
+        </label><br/>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<div *ngIf="flag==1">
+    <h2>{{data.message.data.name}}</h2>
+    <h2>{{data.message.data.brand}}</h2>
+    <h2>{{data.message.data.price}}</h2>
+</div>
